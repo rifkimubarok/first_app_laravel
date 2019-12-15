@@ -22,6 +22,15 @@ class CreateFilmTable extends Migration
             $table->decimal('rating',10,2);
             $table->timestamps();
         });
+
+        Schema::table('film', function($table)
+        {
+            $table->integer('isDewasa')->after('rating');
+            $table->string('tahun', 4)->change();
+            $table->renameColumn('rating', 'penilaian');
+            $table->dropColumn('isDewasa');
+            $table->unique('judul');
+        });
     }
 
     /**

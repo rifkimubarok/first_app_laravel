@@ -32,3 +32,5 @@ Route::get('/film/{id}/delete','FilmController@delete');
 
 Route::get('/film/{id}/update','FilmController@update');
 Route::post('/film/{id}/updating','FilmController@updating');
+
+Route::get("/data","DataController@index");

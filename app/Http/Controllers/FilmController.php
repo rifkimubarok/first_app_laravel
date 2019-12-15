@@ -14,9 +14,8 @@ class FilmController extends Controller
         }else{
             $film = Film::orderby("judul","Asc");
         }
-        $film = $film->paginate(2);
+        $film = $film->paginate(10);
         $film->appends($request->only("cari"));
-        // dd($film);
         return view("film.index",compact("film"));
     }
 
@@ -36,7 +35,6 @@ class FilmController extends Controller
     public function update($id)
     {
         $film = Film::find($id);
-        // echo $film->id;
         return view("film.update",compact("film"));
     }
 

@@ -18,6 +18,7 @@
         <div class="row">
             <h1>Data Film</h1>
             <div class="col-md-12 table-responsive">
+            <!-- setelah tombah tambah data -->
             @if(session('success'))
                 <div class="alert alert-success  alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -25,6 +26,7 @@
                 </div>
             @endif
             <a class="btn btn-primary" style="margin-bottom:10px;" href="/film/create">Tambah Data</a>
+            <!-- disimpan setelah tombol tambah data -->
             <form action="/film" method="get" role="form">
                 <div class="row">
                     <div class="form-group col-md-6">
